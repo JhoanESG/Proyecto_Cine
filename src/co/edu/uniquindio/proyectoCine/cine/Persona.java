@@ -6,6 +6,12 @@ public class Persona {
     private String cedula;
     private boolean sexo;
 
+    public Persona(String nombre, String cedula, boolean sexo) {
+        this.nombre = nombre;
+        this.cedula = cedula;
+        this.sexo = sexo;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -25,4 +31,5 @@ public class Persona {
     public void setSexo(boolean sexo) {
         this.sexo = sexo;
     }
+
 }
