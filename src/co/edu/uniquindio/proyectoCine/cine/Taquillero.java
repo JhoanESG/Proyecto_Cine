@@ -1,5 +1,4 @@
 package co.edu.uniquindio.proyectoCine.cine;
 
-public class Empleado extends Persona{
-
+public class Taquillero {
 }
