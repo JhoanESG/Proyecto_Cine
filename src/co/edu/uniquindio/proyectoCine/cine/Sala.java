@@ -12,7 +12,10 @@ public class Sala {
 		this.zonaPreferencial = zonaPreferencial;
 		this.idSala = idSala;
 	}
-	
+
+
+
+
 	public Zona getZonaGeneral() {
 		return zonaGeneral;
 	}

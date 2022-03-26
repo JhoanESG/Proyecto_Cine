@@ -2,6 +2,7 @@ package co.edu.uniquindio.proyectoCine;
 
 import co.edu.uniquindio.proyectoCine.cine.Cliente;
 import co.edu.uniquindio.proyectoCine.cine.Persona;
+import co.edu.uniquindio.proyectoCine.cine.Zona;
 
 import javax.swing.*;
 
@@ -18,6 +19,8 @@ public class Main {
     	 * otra forma, revisar el historial de reservas por un cliente especifico 
     	 */
         //Persona persona1 = new Persona("Pepito", "1234", true);
+
+		Zona zona1 = new Zona("011");
 
         Cliente cliente1 = new Cliente("Pepito", "1234", true, "5678");
 
