@@ -1,13 +1,13 @@
 package co.edu.uniquindio.proyectoCine.cine;
 
 public class Empleado extends Persona{
-<<<<<<< HEAD
 	
 	private String tipoEmpleado;
 	private String codigoEmpleado;
 
-	public Empleado(String codigoEmpleado, String tipoEmpleado) {
-		super();
+	public Empleado(String nombre, String cedula, boolean sexo, String tipoEmpleado, String codigoEmpleado) {
+		super(nombre, cedula, sexo);
+		this.tipoEmpleado = tipoEmpleado;
 		this.codigoEmpleado = codigoEmpleado;
 	}
 
@@ -26,14 +26,5 @@ public class Empleado extends Persona{
 	public void setTipoEmpleado(String tipoEmpleado) {
 		this.tipoEmpleado = tipoEmpleado;
 	}
-	
-=======
-    private String codigoEmpleado;
-
-    public Empleado(String nombre, String cedula, boolean sexo, String codigoEmpleado) {
-        super(nombre, cedula, sexo);
-        this.codigoEmpleado = codigoEmpleado;
-    }
->>>>>>> 5e704ed8d3446512a425de0cb6e65309a08364cd
 
 }
