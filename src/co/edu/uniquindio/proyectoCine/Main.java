@@ -16,8 +16,6 @@ public class Main {
 
 		Zona zona1 = new Zona("011", 3,3);
 
-        Cliente cliente1 = new Cliente("Pepito", "1234", true, "5678");
-
-        System.out.println(cliente1.isSexo());
+        Cliente cliente1 = new Cliente("Pepito", "1234", true);
     }
 }
