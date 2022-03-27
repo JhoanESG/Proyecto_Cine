@@ -1,20 +1,40 @@
 package co.edu.uniquindio.proyectoCine.cine;
 
+import java.util.ArrayList;
+
 public class Sala {
 	
 	private Zona zonaGeneral;
 	private Zona zonaPreferencial;
 	private String idSala;
 	
-	public Sala(Zona zonaGeneral, Zona zonaPreferencial, String idSala) {
+	public Sala(String idSala) {
 		super();
 		this.zonaGeneral = zonaGeneral;
 		this.zonaPreferencial = zonaPreferencial;
 		this.idSala = idSala;
+		crearZonas();
 	}
 
+	public void crearZonas(){
+		zonaGeneral = new Zona("01",12, 15);
+		zonaPreferencial = new Zona("02", 12, 15);
+	}
 
-
+//	public void reservarAsiento(int cantidad, ArrayList<String> sillas){
+//
+//		char letras[] = new char[sillas.size()];
+//		int numeros[] = new int[sillas.size()];
+//		String concatenado = "";
+//		for (int i = 0; i < sillas.size(); i++) {
+//			concatenado= sillas.get(i);
+//
+//			for (int j = 0; j < sillas.size(); j++) {
+//
+//			}
+//
+//		}
+//	}
 
 	public Zona getZonaGeneral() {
 		return zonaGeneral;

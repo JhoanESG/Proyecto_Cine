@@ -1,26 +1,20 @@
 package co.edu.uniquindio.proyectoCine;
 
-import co.edu.uniquindio.proyectoCine.cine.Cliente;
-import co.edu.uniquindio.proyectoCine.cine.Persona;
-import co.edu.uniquindio.proyectoCine.cine.Zona;
+import co.edu.uniquindio.proyectoCine.cine.*;
 
 import javax.swing.*;
 
 public class Main {
 
     public static void main(String[] args) {
-    	
-    	
-    	/*
-    	 * Nosotros llenamos los datos de las tablas quemandolas, se crean un bojeto de empleado 1, empleado 2, silla 1, silla 2, sala1, zona, 
-    	 * Inventar la forma de generar la reserva, hay que utulizar todo lo anterior y mostramos la reserva
-    	 * 
-    	 * 
-    	 * otra forma, revisar el historial de reservas por un cliente especifico 
-    	 */
-        //Persona persona1 = new Persona("Pepito", "1234", true);
 
-		Zona zona1 = new Zona("011");
+		Pelicula peli2054 = new Pelicula("0", 90,"Malos", GeneroPelicula.FICCION);
+		Pelicula peli2055 = new Pelicula("1", 120,"Red", GeneroPelicula.FICCION);
+		Pelicula peli2056 = new Pelicula("2", 180,"End Game", GeneroPelicula.ACCION);
+		Pelicula peli2057 = new Pelicula("3", 145,"Animales Fantasticos", GeneroPelicula.FANTASIA);
+		Pelicula peli2058 = new Pelicula("4", 100,"Los Tipos Malos", GeneroPelicula.FICCION);
+
+		Zona zona1 = new Zona("011", 3,3);
 
         Cliente cliente1 = new Cliente("Pepito", "1234", true, "5678");
 

@@ -6,29 +6,28 @@ public class Zona {
 	
 	private String idZona;
 	//private ArrayList<Asiento> asientos;
-	private Asiento matrizAsientos[][] = new Asiento[12][15];
+	private Asiento matrizAsientos[][];
 
-//	public Zona(ArrayList<Asiento> zonas, String idZona) {
-//		super();
-//		this.asientos = zonas;
-//		this.idZona = idZona;
-//	}
-
-
-	public Zona(String idZona) {
+	public Zona(String idZona, int filas, int columnas) {
+		matrizAsientos = new Asiento[filas][columnas];
 		this.idZona = idZona;
+		llenarMatrizAsientos();
 	}
 
-	public void llenarMatrizAsientos(){
-		String llenar= "";
+
+	private void llenarMatrizAsientos(){
+
 		for (int i = 0; i < matrizAsientos.length; i++) {
+			int fila = matrizAsientos[0].length;
 			for (int j = 0; j < matrizAsientos[0].length; j++) {
-				llenar = "" + (1+ i) + "  " +(j+1);
-				matrizAsientos[i][j].setNumSilla(llenar);
+				matrizAsientos[i][j] = new Asiento( (char)('A'+i), fila, false);
+				fila --;
 			}
 
 		}
 	}
+
+
 
 	public String getIdZona() {
 		return idZona;

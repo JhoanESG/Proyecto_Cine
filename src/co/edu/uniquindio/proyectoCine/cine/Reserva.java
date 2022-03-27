@@ -12,47 +12,62 @@ import java.util.ArrayList;
 public class Reserva {
 	
 	private String idReserva;
-	private ArrayList<Asiento> asientosReservados; // implicitamente esta la cantidad de asientos 
-	private Double montoCop;
-	private String tipoPago;
+	private int asientosReservados; // implicitamente esta la cantidad de asientos
+	private Double montoTtlCop;
 	private Persona empleado; //Una persona esta tomando la forma de un empleado
 	private Funcion funcion;  // estaba relacionado con codigo de pelicula, # sala, Zona, # asiento, 
 	private Persona cliente; // polimorfismo, instanciar al padre que es persona. 
+
 	
-	
-	public Reserva(String idReserva, ArrayList<Asiento> asientosReservados, Double montoCop, String tipoPago,
-			Persona empleado, Funcion funcion, Persona cliente) {
+	public Reserva(String idReserva, int asientosReservados, Persona empleado, Funcion funcion, Persona cliente, int cantTiquetes) {
 		super();
 		this.idReserva = idReserva;
 		this.asientosReservados = asientosReservados;
-		this.montoCop = montoCop;
-		this.tipoPago = tipoPago;
+		this.montoTtlCop = calcularMontoCop(cantTiquetes);
 		this.empleado = empleado;
 		this.funcion = funcion;
 		this.cliente = cliente;
+
 	}
 
+	@Override
+	public String toString() {
+		return "Reserva{" +
+				"idReserva='" + idReserva + '\'' +
+				", asientosReservados=" + asientosReservados +
+				", montoCop=" + montoTtlCop +
+				", empleado=" + empleado +
+				", funcion=" + funcion +
+				", cliente=" + cliente +
+				'}';
+	}
+
+
+
+	public double calcularMontoCop(int cantidadTiquetes) {
+		double monto= 0;
+		double precioPelicula = funcion.definirPrecioPorEntrada(funcion);
+		monto = cantidadTiquetes * precioPelicula;
+		return monto;
+	}
 
 	public Persona getCliente() {
 		return cliente;
 	}
-
 
 	public void setCliente(Persona cliente) {
 		this.cliente = cliente;
 	}
 
 
-	public ArrayList<Asiento> getAsientosReservados() {
+	public int getAsientosReservados() {
 		return asientosReservados;
 	}
 
 
-	public void setAsientosReservados(ArrayList<Asiento> asientosReservados) {
+	public void setAsientosReservados(int asientosReservados) {
 		this.asientosReservados = asientosReservados;
 	}
-
-
 
 	public String getIdReserva() {
 		return idReserva;
@@ -65,23 +80,13 @@ public class Reserva {
 
 
 
-	public Double getMontoCop() {
-		return montoCop;
+	public Double getMontoTtlCop() {
+		return montoTtlCop;
 	}
 
 
-	public void setMontoCop(Double montoCop) {
-		this.montoCop = montoCop;
-	}
-
-
-	public String getTipoPago() {
-		return tipoPago;
-	}
-
-
-	public void setTipoPago(String tipoPago) {
-		this.tipoPago = tipoPago;
+	public void setMontoTtlCop(Double montoTtlCop) {
+		this.montoTtlCop = montoTtlCop;
 	}
 
 
